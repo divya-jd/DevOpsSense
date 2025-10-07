@@ -22,7 +22,7 @@ DevOpsSense is a lightweight, cloud-friendly **DevOps monitoring stack**:
 git clone https://github.com/divya-jd/DevOpsSense.git
 cd DevOpsSense
 cp backend/.env.example backend/.env
-# edit WEBHOOK_TOKEN=changeme (set your secret)
+- edit WEBHOOK_TOKEN=changeme (set your secret)
 
 ### Run the stack
 docker compose up --build
