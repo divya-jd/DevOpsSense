@@ -1,0 +1,13 @@
+{
+  "workflow": {"name":"CI"},
+  "workflow_run": {
+    "id": 123456789,
+    "status": "completed",
+    "conclusion": "success",
+    "head_branch": "main",
+    "created_at": "2025-10-07T15:00:00Z",
+    "updated_at": "2025-10-07T15:02:10Z"
+  },
+  "repository": {"full_name":"divya-jd/sample-repo"},
+  "sender": {"login":"divya-jd"}
+}

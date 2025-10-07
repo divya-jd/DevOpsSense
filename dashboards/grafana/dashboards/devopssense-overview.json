@@ -1,0 +1,28 @@
+{
+  "title": "DevOpsSense Overview",
+  "timezone": "browser",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Pipeline Success",
+      "targets": [{"expr": "sum(devopssense_pipeline_success_total)"}],
+      "gridPos": {"x":0,"y":0,"w":8,"h":6}
+    },
+    {
+      "type": "stat",
+      "title": "Pipeline Failure",
+      "targets": [{"expr": "sum(devopssense_pipeline_failure_total)"}],
+      "gridPos": {"x":8,"y":0,"w":8,"h":6}
+    },
+    {
+      "type": "graph",
+      "title": "Pipeline Duration (p95)",
+      "targets": [
+        {"expr": "histogram_quantile(0.95, sum(rate(devopssense_pipeline_duration_seconds_bucket[5m])) by (le))"}
+      ],
+      "gridPos": {"x":0,"y":6,"w":16,"h":8}
+    }
+  ],
+  "schemaVersion": 39,
+  "version": 1
+}
